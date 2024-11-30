@@ -25,7 +25,7 @@ document.getElementById('register').addEventListener('click', async () => {
     const password = document.getElementById('register-password').value;
 
     try {
-        const response = await fetch('http://localhost:4000/register', {
+        const response = await fetch('/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -50,7 +50,7 @@ document.getElementById('login').addEventListener('click', async () => {
     const password = document.getElementById('login-password').value;
 
     try {
-        const response = await fetch('http://localhost:4000/login', {
+        const response = await fetch('/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -85,7 +85,7 @@ document.getElementById('create-task').addEventListener('click', async () => {
     const task = { title, description, deadline, priority };
 
     try {
-        const response = await fetch('http://localhost:4000/tasks', {
+        const response = await fetch('/tasks', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
