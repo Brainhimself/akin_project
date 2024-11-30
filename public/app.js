@@ -161,7 +161,7 @@ async function fetchTasks() {
     const token = localStorage.getItem('token');
 
     try {
-        const response = await fetch('http://localhost:3000/tasks', {
+        const response = await fetch('/tasks', {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
